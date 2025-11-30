@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bia31i1lq3ku4"]
+
+[ext_resource type="PackedScene" uid="uid://chjrhhjvxun3r" path="res://assets/player/simple_gun/gun_model.glb" id="1_d6veg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hgb4b"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hgb4b"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hgb4b"]
+size = Vector3(0.1, 0.1, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009904385, 1.010798, -0.013471484)
+shape = SubResource("CapsuleShape3D_hgb4b")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.9768883, 0, 0, 0, 0.9768883, 0, 0, 0, 0.9768883, 0.06628388, 1.4758118, -0.63693285)
+
+[node name="gun_model" parent="Camera3D" instance=ExtResource("1_d6veg")]
+transform = Transform3D(-0.30558506, -2.1721851e-10, 0.010051835, -0.0007470257, 0.27843884, -0.022710267, -0.010024038, -0.02075022, -0.30473998, 0.469518, -0.15519035, -0.49976885)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9798734, 0)
+mesh = SubResource("CapsuleMesh_hgb4b")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3290491, -0.51405287)
+visible = false
+mesh = SubResource("BoxMesh_hgb4b")
