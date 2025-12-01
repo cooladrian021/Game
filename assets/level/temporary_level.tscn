@@ -43,6 +43,7 @@ uv1_triplanar = true
 uv1_triplanar_sharpness = 4.0
 
 [node name="TemporaryLevel" type="Node3D"]
+transform = Transform3D(-0.40719894, 0, -0.9133395, 0, 1, 0, 0.9133395, 0, -0.40719894, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pev5d")
@@ -83,4 +84,4 @@ size = Vector3(9, 11, 9)
 material = SubResource("StandardMaterial3D_7l0sc")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_k2aug")]
-transform = Transform3D(-0.9957633, 0, -0.09195352, 0, 1, 0, 0.09195352, 0, -0.9957633, -0.14426422, 0.49999905, -1.4653945)
+transform = Transform3D(-0.99931675, 0, 0.036957562, 0, 1, 0, -0.036957562, 0, -0.99931675, -0.14426407, 0.49999905, -1.4653945)
